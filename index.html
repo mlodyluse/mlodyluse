@@ -75,24 +75,3 @@
     </footer>
 </body>
 </html>
-
-name: GitHub Pages
-
-on:
-  push:
-    branches:
-      - main  # lub master
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Setup Pages
-        uses: actions/setup-pages@v2
-      - name: Deploy
-        run: |
-          mkdir -p public
-          cp index.html public/
-          echo 'moja-strona' > public/CNAME
-
